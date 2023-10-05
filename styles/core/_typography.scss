@@ -1,0 +1,33 @@
+// @font-face {
+//     font-family: 'disket_monoregular';
+//     src: url('../../assets/fonts/disket/disket-mono-regular-webfont.woff2') format('woff2'),
+//          url('../../assets/fonts/disket/disket-mono-regular-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+
+// }
+
+// @font-face {
+// font-family: 'sk-modernistregular';
+// src: url('../../assets/fonts/modernist/sk-modernist-regular-webfont.woff2') format('woff2'),
+//         url('../../assets/fonts/modernist/sk-modernist-regular-webfont.woff') format('woff');
+//         font-weight: 400;
+//         font-display: swap;
+//         font-style: normal;
+// }
+
+@font-face {
+    font-family: 'sk-modernistregular';
+    src: url('./../fonts/modernist/sk-modernist-regular-webfont.woff2') format('woff2'),
+            url('./../fonts/modernist/sk-modernist-regular-webfont.woff') format('woff');
+            font-weight: 400;
+            font-display: swap;
+            font-style: normal;
+    }
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--text-headings);
+}
+

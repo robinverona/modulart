@@ -1,0 +1,29 @@
+@mixin for-phone-only {
+    @media (max-width: $screen-sm-max) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: $screen-sm-max) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: $screen-md-min) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: $screen-lg-min) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: $screen-2xl-min) {
+        @content;
+    }
+}

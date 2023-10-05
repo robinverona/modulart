@@ -1,0 +1,43 @@
+.link {
+    color: white;
+    // text-decoration: underline;
+    padding: 0 0 6px 0;
+    position: relative;
+    display: inline-block;
+    max-width: max-content;
+    // color: var(--color-on-bg);
+    mix-blend-mode: difference;
+
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: rgba(255,255,255,.3);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: #fff;
+        transform: scaleX(0);
+        transition: transform .8s cubic-bezier(.19,1,.22,1);
+    }
+
+    &:hover::after {
+        color: inherit;
+        transform: scaleX(1);
+        // border: red solid 1px;
+
+    }
+
+}

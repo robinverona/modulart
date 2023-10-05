@@ -1,0 +1,30 @@
+:root {
+    --color-primary: #191919; 
+    --color-secondary: #bdbdbd; 
+
+    --color-bg: var(--color-primary); 
+    --color-on-bg: var(--color-secondary); 
+
+    --color-success: #00d13c;
+    --color-alert: #FE1B00;
+    --color-warning: #ffcd29;
+
+    /* Fonts */
+    /* https://typescale.com/ */
+
+    --font-size-small: 0.667rem; 
+    --font-size-regular: 1rem; 
+    --font-size-large: 1.5rem; 
+    --font-size-xl: 2.25rem; 
+    --font-size-2xl: 3.375rem; 
+    --font-size-3xl: 5.063rem; 
+    --font-size-4xl: 7.594rem; 
+
+    --font-family-sans: 'sk-modernistregular';
+    --font-family-serif: 'Times'; 
+    --font-family-mono: 'disket_monoregular';
+
+    --text-body: var(--font-family-sans);
+    --text-headings: var(--font-family-sans);
+
+}

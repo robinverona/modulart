@@ -1,0 +1,13 @@
+.single {
+
+
+    & h2 {
+        font-size: var(--font-size-xl);
+        margin-bottom: 2rem;
+    }
+
+    & p {
+        font-size: var(--font-size-large);
+        margin: 1rem 0;
+    }
+}

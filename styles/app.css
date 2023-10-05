@@ -1,0 +1,376 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --color-primary: #191919;
+  --color-secondary: #bdbdbd;
+  --color-bg: var(--color-primary);
+  --color-on-bg: var(--color-secondary);
+  --color-success: #00d13c;
+  --color-alert: #FE1B00;
+  --color-warning: #ffcd29;
+  /* Fonts */
+  /* https://typescale.com/ */
+  --font-size-small: 0.667rem;
+  --font-size-regular: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-xl: 2.25rem;
+  --font-size-2xl: 3.375rem;
+  --font-size-3xl: 5.063rem;
+  --font-size-4xl: 7.594rem;
+  --font-family-sans: "sk-modernistregular";
+  --font-family-serif: "Times";
+  --font-family-mono: "disket_monoregular";
+  --text-body: var(--font-family-sans);
+  --text-headings: var(--font-family-sans);
+}
+
+@font-face {
+  font-family: "sk-modernistregular";
+  src: url("./../fonts/modernist/sk-modernist-regular-webfont.woff2") format("woff2"), url("./../fonts/modernist/sk-modernist-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--text-headings);
+}
+
+/* Breakpoints */
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--color-on-bg);
+  background-color: var(--color-bg);
+  scroll-behavior: smooth;
+}
+
+html * {
+  font-family: var(--text-body);
+}
+
+a {
+  color: var(--color-on-bg);
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar,
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 2.5vw;
+  border-bottom: black solid 2px;
+}
+
+.content {
+  max-width: 100%;
+  height: 100%;
+}
+.content img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+  .sidebar,
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: sticky;
+    height: calc(100vh - 80px);
+    top: 1em;
+    border-bottom: 0;
+    align-items: flex-start;
+  }
+  .content {
+    max-width: 100%;
+    height: 100%;
+    padding: 1em;
+  }
+  .content img {
+    width: 100%;
+    height: auto;
+  }
+}
+.about {
+  font-size: var(--font-size-large);
+  line-height: calc(var(--font-size-large) + 3px);
+  width: 100%;
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding-top: 2.5vh;
+}
+.about img {
+  position: absolute;
+  max-width: 450px;
+  object-fit: contain;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+}
+.about h2 {
+  font-weight: 200;
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  border-bottom: solid 1px white;
+  margin: 2rem 0;
+}
+.about .bio {
+  display: flex;
+  flex-direction: row;
+}
+.about .bio p {
+  margin: 1rem 0;
+  color: var(--color-on-bg);
+}
+.about .contact {
+  display: flex;
+  flex-direction: column;
+}
+.about .contact .link.email--min, .about .contact .link.instagram--min {
+  font-size: var(--font-size-xl);
+  margin: 1rem 0;
+}
+.about .link.email--max, .about .link.instagram--max {
+  font-size: var(--font-size-large);
+  margin-top: 0.5rem;
+}
+
+@container (max-width: 500px) {
+  .bio--medium {
+    display: none;
+  }
+}
+@container (min-width: 500px) {
+  .bio--medium {
+    display: block;
+  }
+}
+@container (max-width: 939px) {
+  .bio {
+    font-size: var(--font-size-large);
+  }
+  .bio--max {
+    display: none;
+  }
+  .contact .email--max, .contact .instagram--max {
+    display: none;
+  }
+}
+@container (min-width: 940px) {
+  .bio img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .bio--max {
+    display: block;
+  }
+  .contact .email--min, .contact .instagram--min {
+    display: none;
+  }
+  .contact .email--max, .contact .instagram--max {
+    display: block;
+    font-size: var(--font-size-large);
+    margin-top: 0.5rem 0;
+  }
+}
+.content {
+  container-type: inline-size;
+}
+
+.works__list li {
+  margin: 1rem 0;
+}
+
+.work__infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-large);
+  border-top: solid 1px white;
+  padding: 7px 0;
+}
+.work__infos .title {
+  color: white;
+  text-transform: uppercase;
+}
+.work__infos .subtitle {
+  color: var(--color-on-bg);
+  text-transform: lowercase;
+}
+
+@container (max-width: 940px) {
+  .work__infos {
+    display: none;
+  }
+  .subtitle {
+    display: none;
+  }
+}
+@container (min-width: 941px) {
+  .subtitle {
+    display: inline-block;
+  }
+}
+.single h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: 2rem;
+}
+.single p {
+  font-size: var(--font-size-large);
+  margin: 1rem 0;
+}
+
+@media (min-width: 1024px) {
+  .split {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .gutter {
+    background-color: transparent;
+    border-left: double white 1px;
+    border-right: double white 1px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .gutter.gutter-horizontal {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
+    cursor: col-resize;
+  }
+}
+.link {
+  color: white;
+  padding: 0 0 6px 0;
+  position: relative;
+  display: inline-block;
+  max-width: max-content;
+  mix-blend-mode: difference;
+}
+.link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #fff;
+  transform: scaleX(0);
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.link:hover::after {
+  color: inherit;
+  transform: scaleX(1);
+}
+
+.brand {
+  display: block;
+  opacity: 0;
+  animation: reveal 0.6s forwards 0.2s;
+}
+
+@keyframes reveal {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

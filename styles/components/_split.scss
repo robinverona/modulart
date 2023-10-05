@@ -1,0 +1,25 @@
+@include for-desktop-up {
+
+    .split {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .gutter {
+        background-color: transparent;
+        border-left: double white 1px;
+        border-right: double white 1px;
+        
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .gutter.gutter-horizontal {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+        cursor: col-resize;
+    }
+
+}
