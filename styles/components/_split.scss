@@ -12,7 +12,11 @@
         background-color: transparent;
         border-left: double white 1px;
         border-right: double white 1px;
-        
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
         background-repeat: no-repeat;
         background-position: center;
     }

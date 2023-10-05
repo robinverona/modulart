@@ -1,6 +1,7 @@
 .about {
     // outline: greenyellow solid 1px;
     font-size: var(--font-size-large);
+    font-weight: 300;
     line-height: calc( var(--font-size-large) + 3px);
     width: 100%;
     container-type: inline-size;
@@ -48,6 +49,7 @@
 
         & .link.email--min, .link.instagram--min {
             font-size: var(--font-size-xl);
+            line-height: var(--font-size-xl);
             margin: 1rem 0;
         }
 
@@ -65,11 +67,26 @@
     .bio--medium {
         display: none;
     }
+
+    .contact .email--max, .contact .instagram--max {
+        display: none
+    }
+
 }
 
 @container (min-width: 500px) {
     .bio--medium {
         display: block;
+    }
+
+    .contact .email--min, .contact .instagram--min {
+        display: none;
+    }
+
+    .contact .email--max, .contact .instagram--max {
+        display: block;
+        font-size: var(--font-size-large);
+        margin-top: .5rem 0;
     }
 }
 
@@ -82,10 +99,6 @@
 
     .bio--max {
         display: none;
-    }
-
-    .contact .email--max, .contact .instagram--max {
-        display: none
     }
 
   }
@@ -102,13 +115,5 @@
         display: block;
     }
 
-    .contact .email--min, .contact .instagram--min {
-        display: none;
-    }
 
-    .contact .email--max, .contact .instagram--max {
-        display: block;
-        font-size: var(--font-size-large);
-        margin-top: .5rem 0;
-    }
 }

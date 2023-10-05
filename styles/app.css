@@ -69,7 +69,7 @@ table {
   --font-size-2xl: 3.375rem;
   --font-size-3xl: 5.063rem;
   --font-size-4xl: 7.594rem;
-  --font-family-sans: "sk-modernistregular";
+  --font-family-sans: "sk-modernistregular", sans-serif;
   --font-family-serif: "Times";
   --font-family-mono: "disket_monoregular";
   --text-body: var(--font-family-sans);
@@ -89,8 +89,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Breakpoints */
 html, body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -170,6 +170,7 @@ a {
 }
 .about {
   font-size: var(--font-size-large);
+  font-weight: 300;
   line-height: calc(var(--font-size-large) + 3px);
   width: 100%;
   container-type: inline-size;
@@ -209,6 +210,7 @@ a {
 }
 .about .contact .link.email--min, .about .contact .link.instagram--min {
   font-size: var(--font-size-xl);
+  line-height: var(--font-size-xl);
   margin: 1rem 0;
 }
 .about .link.email--max, .about .link.instagram--max {
@@ -220,10 +222,21 @@ a {
   .bio--medium {
     display: none;
   }
+  .contact .email--max, .contact .instagram--max {
+    display: none;
+  }
 }
 @container (min-width: 500px) {
   .bio--medium {
     display: block;
+  }
+  .contact .email--min, .contact .instagram--min {
+    display: none;
+  }
+  .contact .email--max, .contact .instagram--max {
+    display: block;
+    font-size: var(--font-size-large);
+    margin-top: 0.5rem 0;
   }
 }
 @container (max-width: 939px) {
@@ -231,9 +244,6 @@ a {
     font-size: var(--font-size-large);
   }
   .bio--max {
-    display: none;
-  }
-  .contact .email--max, .contact .instagram--max {
     display: none;
   }
 }
@@ -245,14 +255,6 @@ a {
   }
   .bio--max {
     display: block;
-  }
-  .contact .email--min, .contact .instagram--min {
-    display: none;
-  }
-  .contact .email--max, .contact .instagram--max {
-    display: block;
-    font-size: var(--font-size-large);
-    margin-top: 0.5rem 0;
   }
 }
 .content {
@@ -314,6 +316,11 @@ a {
     background-color: transparent;
     border-left: double white 1px;
     border-right: double white 1px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -324,7 +331,6 @@ a {
 }
 .link {
   color: white;
-  padding: 0 0 6px 0;
   position: relative;
   display: inline-block;
   max-width: max-content;
