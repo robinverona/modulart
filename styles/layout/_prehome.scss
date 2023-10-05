@@ -1,0 +1,28 @@
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+}
+
+.bar {
+    width: 10vw;
+    height: 105vh;
+    background-color: var(--color-bg);
+    background-color: black;
+
+}
+
+.counter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 99;
+    color: var(--color-on-bg);
+    font-size: 20vw;
+    // padding: 0.2em 0.4em;
+}
