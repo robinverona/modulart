@@ -37,10 +37,8 @@
             margin: 1rem 0;
             color: var(--color-on-bg);
             // mix-blend-mode: difference;
-            // display: block;
-            // opacity: 0;
-            // animation: reveal 0.6s forwards .2s;
         }
+
     }
 
     .contact {
@@ -77,6 +75,18 @@
 @container (min-width: 500px) {
     .bio--medium {
         display: block;
+        opacity: 0;
+        animation: reveal 0.6s forwards .2s;
+    }
+
+    @keyframes reveal {
+        from {
+            transform: translateY(20px);
+        } 
+        to {
+            opacity: 1;
+            transform: none;
+        }
     }
 
     .contact .email--min, .contact .instagram--min {
@@ -113,6 +123,18 @@
 
     .bio--max {
         display: block;
+        opacity: 0;
+        animation: reveal 0.6s forwards .2s;
+    }
+
+    @keyframes reveal {
+        from {
+            transform: translateY(20px);
+        } 
+        to {
+            opacity: 1;
+            transform: none;
+        }
     }
 
 

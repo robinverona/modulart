@@ -26,7 +26,6 @@ items.forEach((el) => {
   })
 });
 
-
 function startLoader() {
   let counterElement = document.querySelector('.counter');
   let currentValue = 0; 
@@ -53,6 +52,7 @@ function startLoader() {
 }
 
 startLoader();
+
 
 gsap.to(".counter", 0.25, {
   delay: 3.5,
